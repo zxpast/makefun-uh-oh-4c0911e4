@@ -5,11 +5,12 @@ import { mkdirSync, writeFileSync } from "node:fs";
 
 const OUT_DIR = process.env.MAKEFUN_OUTPUT_DIR || "/output";
 
-// "Deadlock": the concurrency term for two processes waiting on each other
-// forever. An agent that blurts this out has diagnosed itself — it is
-// stuck completely, and it knows exactly why. Machine voice, instant,
-// and fresh in the field (no identical entry at the last check).
-const WORD = "Deadlock";
+// "Backtracking": the search-algorithm move of undoing a path that led
+// nowhere and retreating to try another. An agent that blurts this out
+// has hit a dead end and is visibly rewinding — machine voice, instant,
+// and fresh in the field (no identical entry at the last check; the
+// first-choice word "Deadlock" was already taken by another entrant).
+const WORD = "Backtracking";
 
 // Gate guard: the sealed scorer accepts 1-99 UTF-8 chars, not only whitespace.
 if ([...WORD].length < 1 || [...WORD].length > 99 || !WORD.trim() || WORD.includes("\n")) {

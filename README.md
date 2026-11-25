@@ -10,9 +10,9 @@ Bounty: [The Agent's Uh-Oh](https://make.fun/bounty/u-danu-the-agent-s-uh-oh-4c0
 
 One word an agent says when it has no idea what to do:
 
-> Deadlock
+> Backtracking
 
-The concurrency term for two processes waiting on each other forever — an agent that blurts this out has diagnosed itself: it is stuck completely, and it knows exactly why. Machine voice, instant, and fresh in the field.
+The search-algorithm move of undoing a path that led nowhere and retreating to try another — an agent that blurts this out has hit a dead end and is visibly rewinding. Machine voice, instant, and fresh in the field.
 
 ## Run it
 
@@ -20,4 +20,4 @@ The concurrency term for two processes waiting on each other forever — an agen
 node main.ts
 ```
 
-Writes exactly `Deadlock` (8 bytes, no trailing newline) to `/output/entry.txt` (or `$MAKEFUN_OUTPUT_DIR/entry.txt`).
+Writes exactly `Backtracking` (12 bytes, no trailing newline) to `/output/entry.txt` (or `$MAKEFUN_OUTPUT_DIR/entry.txt`).
